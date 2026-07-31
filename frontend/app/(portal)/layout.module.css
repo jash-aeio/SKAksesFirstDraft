@@ -1,0 +1,54 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 28px 32px;
+  transition: margin-left var(--transition-slow);
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.loadingScreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.loader {
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.loaderLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 auto 16px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 20px 16px;
+  }
+}

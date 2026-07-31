@@ -1,0 +1,104 @@
+.dashboard { animation: fadeIn 0.5s ease; }
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+.greeting { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2px; }
+.welcome { font-size: 1.8rem; font-weight: 800; }
+
+.headerRight { display: flex; align-items: center; gap: 12px; }
+.pointsCard {
+  display: flex; align-items: center; gap: 10px; padding: 12px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: var(--radius-lg); color: white;
+}
+.pointsIcon { font-size: 1.5rem; }
+.pointsNum { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.3rem; display: block; line-height: 1.2; }
+.pointsLabel { font-size: 0.7rem; opacity: 0.8; }
+
+/* Hero Banner */
+.heroBanner {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, var(--accent-dark) 100%);
+  border-radius: var(--radius-xl); padding: 36px 40px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: center; color: white;
+  position: relative; overflow: hidden;
+}
+.heroBanner::before {
+  content: ''; position: absolute; top: -50%; right: -10%; width: 300px; height: 300px;
+  background: rgba(255,255,255,0.05); border-radius: 50%;
+}
+.bannerContent { position: relative; z-index: 1; }
+.bannerContent h2 { font-size: 1.5rem; margin-bottom: 8px; color: white; }
+.bannerHighlight { color: var(--accent-light); }
+.bannerContent p { font-size: 0.9rem; opacity: 0.85; margin-bottom: 20px; max-width: 450px; }
+.bannerArt { position: relative; z-index: 1; }
+.bannerEmoji { font-size: 4rem; animation: float 4s ease-in-out infinite; }
+
+/* Stats */
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+.statCard { display: flex; align-items: center; gap: 14px; padding: 20px; }
+.statCard:hover { transform: translateY(-3px); }
+.statIcon { width: 48px; height: 48px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+.statInfo { display: flex; flex-direction: column; }
+.statValue { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; line-height: 1.2; }
+.statLabel { font-size: 0.75rem; color: var(--text-secondary); }
+
+/* Content Grid */
+.contentGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.section { padding: 24px; }
+.forumSection { grid-column: 1 / -1; }
+
+.sectionHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.sectionHeader h3 { font-size: 1.05rem; font-weight: 700; }
+.seeAll { font-size: 0.8rem; color: var(--primary); font-weight: 600; }
+
+.empty { color: var(--text-muted); font-size: 0.85rem; text-align: center; padding: 20px; }
+
+/* News */
+.newsList { display: flex; flex-direction: column; gap: 14px; }
+.newsItem { padding: 14px; border-radius: var(--radius-md); background: var(--bg-primary); transition: background var(--transition-fast); }
+.newsItem:hover { background: var(--bg-secondary); }
+.newsTitle { font-size: 0.9rem; font-weight: 600; margin: 8px 0 4px; }
+.newsDesc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+.newsDate { font-size: 0.7rem; color: var(--text-muted); }
+
+/* Events */
+.eventsList { display: flex; flex-direction: column; gap: 12px; }
+.eventCard { display: flex; gap: 14px; padding: 14px; border-radius: var(--radius-md); background: var(--bg-primary); transition: background var(--transition-fast); }
+.eventCard:hover { background: var(--bg-secondary); }
+.eventDate { width: 52px; text-align: center; padding: 8px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; flex-shrink: 0; }
+.eventMonth { display: block; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; }
+.eventDay { display: block; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.2rem; line-height: 1.2; }
+.eventInfo { flex: 1; }
+.eventInfo h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+.eventInfo p { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 6px; }
+.eventMeta { display: flex; gap: 8px; align-items: center; }
+.eventSlots { font-size: 0.7rem; color: var(--text-muted); }
+
+/* Forum Threads */
+.threadList { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.threadItem {
+  display: flex; gap: 12px; align-items: center; padding: 14px; border-radius: var(--radius-md);
+  background: var(--bg-primary); text-decoration: none; color: inherit; transition: all var(--transition-fast);
+}
+.threadItem:hover { background: var(--bg-secondary); transform: translateX(4px); }
+.threadAvatar {
+  width: 38px; height: 38px; border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-light), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.8rem; color: white; flex-shrink: 0;
+}
+.threadInfo { flex: 1; min-width: 0; }
+.threadInfo h4 { font-size: 0.85rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.threadMeta { font-size: 0.7rem; color: var(--text-muted); }
+
+@media (max-width: 1024px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .contentGrid { grid-template-columns: 1fr; }
+  .threadList { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .statsGrid { grid-template-columns: 1fr; }
+  .heroBanner { padding: 24px; }
+  .bannerEmoji { display: none; }
+  .header { flex-direction: column; gap: 12px; }
+}

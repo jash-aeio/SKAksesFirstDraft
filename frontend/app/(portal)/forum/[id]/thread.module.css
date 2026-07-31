@@ -1,0 +1,30 @@
+.threadPage { animation: fadeIn 0.5s ease; max-width: 800px; }
+.loading { text-align: center; padding: 60px; color: var(--text-muted); }
+.backBtn { margin-bottom: 16px; }
+
+.threadCard { padding: 28px; margin-bottom: 16px; }
+.threadCard:hover { transform: none; }
+.threadHeader { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+.threadAvatar { width: 48px; height: 48px; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; color: white; flex-shrink: 0; }
+.threadTitle { font-size: 1.3rem; margin-bottom: 4px; }
+.threadMeta { display: flex; gap: 6px; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; }
+.threadAuthor { font-weight: 600; color: var(--text-primary); }
+.threadBody { font-size: 0.95rem; line-height: 1.8; color: var(--text-primary); white-space: pre-wrap; margin-bottom: 20px; padding-top: 16px; border-top: 1px solid var(--border-light); }
+.threadActions { display: flex; gap: 16px; padding-top: 16px; border-top: 1px solid var(--border-light); }
+.actionBtn { background: none; border: none; cursor: pointer; font-size: 0.85rem; color: var(--text-secondary); transition: color var(--transition-fast); display: flex; align-items: center; gap: 4px; }
+.actionBtn:hover { color: var(--primary); }
+
+.replyForm { padding: 18px; margin-bottom: 20px; }
+.replyForm:hover { transform: none; }
+.replyInner { display: flex; gap: 12px; align-items: flex-start; }
+.replyInner textarea { flex: 1; min-height: 60px; }
+.replyAvatar { width: 36px; height: 36px; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--primary-light), var(--accent)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: white; flex-shrink: 0; }
+
+.replies { margin-top: 4px; }
+.repliesTitle { font-size: 1rem; margin-bottom: 14px; }
+.replyCard { padding: 18px; margin-bottom: 10px; }
+.replyCard:hover { transform: none; }
+.replyHeader { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.replyAuthor { font-weight: 600; font-size: 0.85rem; display: block; }
+.replyTime { font-size: 0.7rem; color: var(--text-muted); }
+.replyContent { font-size: 0.9rem; line-height: 1.7; color: var(--text-primary); }

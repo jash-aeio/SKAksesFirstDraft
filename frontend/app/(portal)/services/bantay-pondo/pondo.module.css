@@ -1,0 +1,332 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pondo {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ─── Gold Finance Theme ─── */
+.header { margin-bottom: 28px; }
+
+.header h1 {
+  font-size: 1.75rem;
+  color: #92400E;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+/* ─── Summary Cards ─── */
+.summaryRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.summaryCard {
+  background: white;
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+.summaryCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #F59E0B, #D97706);
+}
+
+.summaryLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.summaryValue {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #92400E;
+  font-family: 'Poppins', sans-serif;
+}
+
+.summaryValue.green { color: #059669; }
+
+.summaryMeta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ─── Chart Area ─── */
+.chartSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.chartCard {
+  background: white;
+  border: 1px solid rgba(245, 158, 11, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.chartCard h3 {
+  font-size: 1rem;
+  color: #92400E;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ─── Donut Chart ─── */
+.donutContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.donut {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.donut svg {
+  transform: rotate(-90deg);
+}
+
+.donutCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.donutCenter .val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #92400E;
+}
+
+.donutCenter .lab {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.legendValue {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ─── Progress Bars ─── */
+.barList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.barItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.barHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.barPercent {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.barTrack {
+  height: 8px;
+  background: rgba(245, 158, 11, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.barAmounts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* ─── Expenditure Table ─── */
+.expenditureSection {
+  background: white;
+  border: 1px solid rgba(245, 158, 11, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.expenditureSection h3 {
+  font-size: 1rem;
+  color: #92400E;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.catTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.catTab {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  background: white;
+  color: #92400E;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.catTab:hover { background: rgba(245, 158, 11, 0.06); }
+
+.catTabActive {
+  background: #92400E !important;
+  color: white !important;
+  border-color: #92400E !important;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+}
+
+.table td {
+  padding: 12px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.06);
+  color: var(--text-primary);
+}
+
+.table tr:hover td {
+  background: rgba(245, 158, 11, 0.03);
+}
+
+.amount {
+  font-weight: 600;
+  color: #92400E;
+}
+
+.emptyRow {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 32px !important;
+}
+
+.fiscalSelect {
+  padding: 6px 12px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  background: white;
+  color: #92400E;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+@media (max-width: 768px) {
+  .pondo { padding: 16px; }
+  .chartSection { grid-template-columns: 1fr; }
+  .donutContainer { flex-direction: column; align-items: center; }
+  .summaryRow { grid-template-columns: 1fr 1fr; }
+  .table { font-size: 0.75rem; }
+}

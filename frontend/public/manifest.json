@@ -1,0 +1,22 @@
+{
+  "name": "Katips - Katipunan Central Hub",
+  "short_name": "Katips",
+  "description": "The official digital platform of the Sangguniang Kabataan. Access community forums, news, services, and earn rewards.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F3FF",
+  "theme_color": "#7C3AED",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

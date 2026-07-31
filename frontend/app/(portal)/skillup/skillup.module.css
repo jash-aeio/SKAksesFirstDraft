@@ -1,0 +1,440 @@
+.skillup { animation: fadeIn 0.5s ease; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+.header h1 { font-size: 1.6rem; margin-bottom: 4px; }
+.subtitle { color: var(--text-secondary); font-size: 0.9rem; }
+
+.pointsWallet { display: flex; align-items: center; gap: 12px; padding: 14px 24px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: var(--radius-lg); color: white; }
+.walletIcon { font-size: 1.8rem; }
+.walletPoints { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.5rem; display: block; line-height: 1.2; }
+.walletLabel { font-size: 0.7rem; opacity: 0.8; }
+
+/* Tabs */
+.tabs { display: flex; gap: 4px; margin-bottom: 24px; background: var(--bg-card); padding: 4px; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.tab { flex: 1; padding: 10px 16px; border: none; background: none; border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all var(--transition-fast); color: var(--text-secondary); }
+.tab:hover { color: var(--primary); }
+.tabActive { background: var(--primary) !important; color: white !important; font-weight: 600; }
+
+/* Filters */
+.filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.filterBtn { padding: 7px 16px; border-radius: var(--radius-full); border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all var(--transition-fast); text-transform: capitalize; }
+.filterBtn:hover { border-color: var(--primary-light); color: var(--primary); }
+.filterActive { background: var(--primary) !important; color: white !important; border-color: var(--primary) !important; }
+
+/* ================================
+   EVENT CARDS - Premium Design
+   ================================ */
+.eventsGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+
+.eventCard {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeIn 0.5s ease backwards;
+  display: flex;
+  flex-direction: column;
+}
+.eventCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+  border-color: var(--primary-light);
+}
+
+/* Poster / Image */
+.eventPoster {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+}
+.posterImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.eventCard:hover .posterImg { transform: scale(1.05); }
+.posterPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+}
+.posterPlaceholder span { font-size: 3.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
+.posterOverlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 2;
+}
+.countdown {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.registeredBadge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+}
+.registeredBadge span {
+  background: var(--success);
+  color: white;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(16,185,129,0.4);
+}
+
+/* Card Body */
+.eventBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.eventBadge { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.eventTitle { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.eventDesc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.eventMeta { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.metaItem { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-secondary); }
+.metaIcon { font-size: 0.85rem; }
+
+.eventFooter { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+.participantBar { display: flex; align-items: center; gap: 10px; }
+.progressBar { flex: 1; height: 6px; background: var(--bg-secondary); border-radius: 3px; overflow: hidden; }
+.progressFill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 3px; transition: width var(--transition-base); }
+.participantCount { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
+
+.viewBtn {
+  background: none;
+  border: 1px solid var(--primary-light);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+.viewBtn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ================================
+   MODAL - Event Detail Overlay
+   ================================ */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+.modalContent {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  animation: scaleIn 0.3s ease;
+  position: relative;
+}
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+.modalClose:hover { background: rgba(0,0,0,0.8); transform: scale(1.1); }
+
+/* Modal Hero */
+.modalHero { position: relative; width: 100%; height: 260px; overflow: hidden; }
+.modalHeroImg { width: 100%; height: 100%; object-fit: cover; }
+.modalHeroPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 40%, var(--accent) 100%);
+}
+.modalHeroPlaceholder span { font-size: 5rem; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2)); }
+.modalHeroOverlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Modal Body */
+.modalBody { padding: 28px; }
+.modalBadges { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+.modalTitle { font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; line-height: 1.3; }
+.modalOrganizer { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 20px; }
+
+/* Info Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+}
+.infoItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.infoIcon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.infoItem div { display: flex; flex-direction: column; gap: 2px; }
+.infoItem strong { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 600; }
+.infoItem span { font-size: 0.85rem; color: var(--text-primary); }
+
+/* Sections */
+.modalSection { margin-bottom: 20px; }
+.modalSection h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
+.modalDescription { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8; white-space: pre-wrap; }
+
+/* Tags */
+.tagsList { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  padding: 4px 12px;
+  background: var(--bg-secondary);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Contact Info */
+.contactInfo { display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); }
+
+/* Capacity */
+.modalCapacity { margin-bottom: 24px; }
+.capacityHeader { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); }
+.capacityBar { height: 10px; background: var(--bg-secondary); border-radius: 5px; overflow: hidden; }
+.capacityFill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 5px; transition: width 0.6s ease; }
+
+/* Actions */
+.modalActions { display: flex; flex-direction: column; gap: 10px; }
+.actionBtnFull { width: 100%; padding: 14px; font-size: 0.95rem; }
+.cancelBtn { color: var(--error) !important; text-align: center; font-size: 0.85rem; }
+.cancelBtn:hover { background: var(--error-light) !important; }
+
+/* ================================
+   TICKET MODAL
+   ================================ */
+.ticketModal {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  animation: scaleIn 0.3s ease;
+  position: relative;
+}
+.ticketContent { padding: 0; }
+.ticketHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 28px 16px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+}
+.ticketLogo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.ticketBrand { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; color: white; }
+.ticketSub { font-size: 0.7rem; opacity: 0.8; color: white; }
+
+/* Ticket Divider with notches */
+.ticketDivider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 28px;
+}
+.ticketNotchLeft, .ticketNotchRight {
+  width: 14px;
+  height: 28px;
+  background: var(--bg-primary);
+  flex-shrink: 0;
+  z-index: 1;
+}
+.ticketNotchLeft { border-radius: 0 14px 14px 0; margin-left: -1px; }
+.ticketNotchRight { border-radius: 14px 0 0 14px; margin-right: -1px; }
+.ticketDividerLine {
+  flex: 1;
+  border-top: 2px dashed var(--border);
+}
+
+/* Event Info on Ticket */
+.ticketEventInfo { padding: 4px 28px 8px; }
+.ticketEventTitle { font-size: 1.1rem; font-weight: 800; margin-bottom: 14px; line-height: 1.3; color: var(--text-primary); }
+.ticketInfoGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ticketInfoItem { display: flex; flex-direction: column; gap: 2px; }
+.ticketLabel { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; }
+.ticketValue { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); }
+.ticketStatusConfirmed { color: var(--success) !important; }
+
+.ticketAttendee { padding: 4px 28px 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Ticket Code */
+.ticketCodeSection { padding: 8px 28px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.ticketCodeBox {
+  text-align: center;
+  padding: 14px 24px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--primary-light);
+  width: 100%;
+}
+.ticketCodeLabel { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 4px; font-weight: 600; }
+.ticketCode {
+  font-family: 'Poppins', monospace;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+}
+
+/* Barcode */
+.barcode {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  justify-content: center;
+  padding: 4px 0;
+}
+.barcodeBar {
+  background: var(--text-primary);
+  border-radius: 1px;
+}
+
+.ticketFooter {
+  text-align: center;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  padding: 0 28px 20px;
+  line-height: 1.5;
+}
+
+/* ================================
+   REWARDS, LEADERBOARD, HISTORY
+   (Preserved & Enhanced)
+   ================================ */
+.rewardsGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.rewardCard { padding: 24px; text-align: center; display: flex; flex-direction: column; }
+.rewardCard:hover { transform: translateY(-3px); }
+.rewardEmoji { font-size: 2.5rem; margin-bottom: 12px; }
+.rewardName { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.rewardDesc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px; flex: 1; }
+.rewardMeta { display: flex; justify-content: space-between; margin-bottom: 14px; }
+.rewardCost { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--primary); }
+.rewardQty { font-size: 0.75rem; color: var(--text-muted); }
+.redeemBtn { width: 100%; }
+
+/* Leaderboard */
+.leaderboardCard { padding: 28px; }
+.leaderboardCard:hover { transform: none; }
+.leaderboardCard h3 { font-size: 1.1rem; margin-bottom: 20px; }
+.lbList { display: flex; flex-direction: column; gap: 8px; }
+.lbItem { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--bg-primary); transition: background var(--transition-fast); }
+.lbItem:hover { background: var(--bg-secondary); }
+.lbTop3 { background: var(--bg-secondary); }
+.lbRank { font-size: 1.1rem; width: 30px; text-align: center; flex-shrink: 0; }
+.lbAvatar { width: 38px; height: 38px; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: white; flex-shrink: 0; }
+.lbInfo { flex: 1; }
+.lbName { font-weight: 600; font-size: 0.9rem; display: block; }
+.lbUsername { font-size: 0.75rem; color: var(--text-muted); }
+.lbPoints { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+
+/* History */
+.historyCard { padding: 28px; }
+.historyCard:hover { transform: none; }
+.historyCard h3 { font-size: 1.1rem; margin-bottom: 20px; }
+.historyList { display: flex; flex-direction: column; gap: 8px; }
+.historyItem { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--bg-primary); }
+.historyIcon { width: 32px; height: 32px; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
+.historyIcon.earned { background: var(--success-light); color: #065F46; }
+.historyIcon.spent { background: var(--error-light); color: #991B1B; }
+.historyInfo { flex: 1; }
+.historyDesc { font-size: 0.85rem; font-weight: 500; display: block; }
+.historyDate { font-size: 0.7rem; color: var(--text-muted); }
+.historyPts { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.9rem; }
+.historyPts.earned { color: var(--success); }
+.historyPts.spent { color: var(--error); }
+
+.empty { text-align: center; color: var(--text-muted); padding: 30px; font-size: 0.85rem; }
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 768px) {
+  .eventsGrid { grid-template-columns: 1fr; }
+  .infoGrid { grid-template-columns: 1fr; }
+  .ticketInfoGrid { grid-template-columns: 1fr; }
+  .modalContent { max-height: 95vh; border-radius: var(--radius-lg); }
+  .ticketModal { max-width: 95vw; }
+  .header { flex-direction: column; }
+}

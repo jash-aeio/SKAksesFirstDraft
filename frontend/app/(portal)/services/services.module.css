@@ -1,0 +1,121 @@
+.services { animation: fadeIn 0.5s ease; }
+.header { margin-bottom: 24px; }
+.header h1 { font-size: 1.6rem; margin-bottom: 4px; }
+.subtitle { color: var(--text-secondary); font-size: 0.9rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.serviceCard { padding: 28px; text-align: center; cursor: pointer; }
+.serviceCard:hover { transform: translateY(-4px); }
+.maintenance { opacity: 0.7; border: 1px dashed var(--warning); }
+.serviceIcon { font-size: 2.5rem; margin-bottom: 14px; }
+.serviceName { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+.serviceDesc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; }
+.serviceStatus { margin-top: auto; }
+
+/* Modal */
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 24px; animation: fadeIn 0.2s ease; }
+.modal { width: 100%; max-width: 560px; max-height: 85vh; overflow-y: auto; padding: 28px; animation: scaleIn 0.3s ease; }
+.modal:hover { transform: none; }
+.modalHeader { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
+.modalIcon { font-size: 2rem; flex-shrink: 0; }
+.modalHeader h2 { font-size: 1.2rem; margin-bottom: 4px; }
+.modalHeader p { font-size: 0.8rem; color: var(--text-secondary); }
+.closeBtn { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); margin-left: auto; padding: 4px; }
+.closeBtn:hover { color: var(--text-primary); }
+
+.maintenanceMsg { text-align: center; padding: 40px 20px; }
+.maintenanceIcon { font-size: 3rem; display: block; margin-bottom: 12px; }
+.maintenanceMsg h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--warning); }
+.maintenanceMsg p { color: var(--text-secondary); font-size: 0.9rem; }
+
+.logForm { margin-bottom: 24px; }
+.logForm h3 { font-size: 0.95rem; margin-bottom: 10px; }
+.logForm textarea { margin-bottom: 10px; }
+
+.logList h3 { font-size: 0.95rem; margin-bottom: 12px; }
+.logItem { padding: 14px; background: var(--bg-primary); border-radius: var(--radius-md); margin-bottom: 8px; }
+.logTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.logDate { font-size: 0.7rem; color: var(--text-muted); }
+.logDetails { font-size: 0.85rem; color: var(--text-secondary); }
+
+.empty { text-align: center; color: var(--text-muted); padding: 20px; font-size: 0.85rem; }
+
+/* ─── Expansion Features Section ─── */
+.sectionDivider {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.sectionDivider h2 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionDivider p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.moduleLabel {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.featureCard {
+  padding: 24px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid transparent;
+  text-align: left;
+}
+
+.featureCard:hover { transform: translateY(-3px); }
+
+.featureIcon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.featureName {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.featureDesc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featureArrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.featureCard:hover .featureArrow {
+  transform: translateY(-50%) translateX(4px);
+}
