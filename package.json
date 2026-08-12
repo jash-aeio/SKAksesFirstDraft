@@ -1,0 +1,39 @@
+{
+  "name": "sk-akses",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SK AKSES — Sangguniang Kabataan Access Portal",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "format": "prettier --write \"**/*.{js,jsx,css,json,md}\" --ignore-path .gitignore",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jash-aeio/Katips.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6"
+  },
+  "lint-staged": {
+    "backend/**/*.js": [
+      "eslint --fix --config backend/eslint.config.mjs",
+      "prettier --write"
+    ],
+    "frontend/**/*.{js,jsx}": [
+      "eslint --fix --config frontend/eslint.config.mjs",
+      "prettier --write"
+    ],
+    "**/*.{css,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
